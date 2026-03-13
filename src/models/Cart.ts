@@ -1,35 +1,5 @@
-export interface Category {
-  id: number | string
-  title: string
-}
-
-export interface Product {
-  id: number | string
-  name: string
-  price: number
-  category: Category
-}
-
-export type Role = 'ADMIN' | 'CUSTOMER'
-
-export class User {
-  id: number | string
-  username: string
-  email: string
-  role: Role
-
-  constructor(id: number | string, username: string, email: string, role: Role) {
-    this.id = id
-    this.username = username
-    this.email = email
-    this.role = role
-  }
-}
-
-export interface CartItem {
-  product: Product
-  quantity: number
-}
+import type { Product } from './Product'
+import type { CartItem } from './CartItem'
 
 export class Cart {
   private items: CartItem[] = []
