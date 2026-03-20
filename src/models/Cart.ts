@@ -46,4 +46,8 @@ export class Cart {
   getItems(): CartItem[] {
     return this.items
   }
+
+  clear(): void {
+    this.items = []
+  }
 }
