@@ -31,7 +31,7 @@ export default defineComponent({
 
 <template>
   <PCard
-    class="h-full flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/50 backdrop-blur-sm"
+    class="h-full flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-2xl hover:shadow-primary/20 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/50 backdrop-blur-sm"
   >
     <template #header>
       <div
