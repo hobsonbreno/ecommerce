@@ -1,5 +1,6 @@
 # Evidências
-<img width="1918" height="1068" alt="image" src="https://github.com/user-attachments/assets/52a97806-9394-46fc-92b1-1ac5b0b3254f" />
+<img width="1839" height="1050" alt="image" src="https://github.com/user-attachments/assets/ed83c6aa-788e-4930-bc62-298bf816a478" />
+
 
 
 # VueShop — Atividade 2 | Vue.js & Options API
