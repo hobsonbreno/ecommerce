@@ -69,7 +69,7 @@ export default defineComponent({
           Preço Sugerido
         </p>
         <p
-          class="text-xl sm:text-2xl xl:text-3xl font-black text-emerald-600 dark:text-emerald-400 whitespace-nowrap overflow-hidden text-ellipsis"
+          class="text-lg sm:text-xl lg:text-base xl:text-lg 2xl:text-2xl font-black text-emerald-600 dark:text-emerald-400"
         >
           {{ product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}
         </p>
