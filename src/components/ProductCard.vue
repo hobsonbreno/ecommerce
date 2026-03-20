@@ -19,7 +19,7 @@ export default defineComponent({
     },
   },
 
-  emits: ['add-to-cart'],
+  emits: ['add-to-cart', 'click'],
 
   methods: {
     handleAdd(): void {
@@ -77,12 +77,23 @@ export default defineComponent({
     </template>
 
     <template #footer>
-      <PButton
-        label="Adicionar"
-        icon="pi pi-cart-plus"
-        class="w-full font-bold p-button-sm p-button-raised"
-        @click="handleAdd"
-      />
+      <div class="flex flex-col gap-3">
+        <PButton
+          label="Adicionar ao Carrinho"
+          icon="pi pi-cart-plus"
+          severity="success"
+          class="w-full font-black p-button-sm p-button-raised !rounded-xl !py-3 !shadow-lg !shadow-emerald-500/10 active:scale-95 transition-all"
+          @click.stop="handleAdd"
+        />
+        <PButton
+          label="Saber Mais"
+          icon="pi pi-search"
+          severity="secondary"
+          text
+          class="w-full font-bold p-button-sm !rounded-xl !text-zinc-500 hover:!bg-zinc-100 dark:hover:!bg-white/5"
+          @click.stop="$emit('click')"
+        />
+      </div>
     </template>
   </PCard>
 </template>

@@ -34,7 +34,7 @@ export default defineComponent({
     },
   },
 
-  emits: ['remove-unit', 'remove-item', 'add-unit', 'clear-cart'],
+  emits: ['remove-unit', 'remove-item', 'add-unit', 'clear-cart', 'checkout'],
 
   setup() {
     const confirm = useConfirm()
@@ -85,7 +85,7 @@ export default defineComponent({
         <span class="text-primary text-2xl">🛒</span> Meu Carrinho
       </h2>
       <span
-        class="bg-primary text-white font-bold rounded-full px-3 py-1 text-sm shadow-lg shadow-primary/20"
+        class="bg-primary text-white font-black rounded-full px-4 py-1.5 text-xs shadow-xl shadow-emerald-500/30"
       >
         {{ totalItems }} itens
       </span>
@@ -111,7 +111,9 @@ export default defineComponent({
                 </div>
 
                 <div class="flex-1 min-w-0">
-                  <h4 class="text-sm font-bold text-zinc-800 dark:text-zinc-100 truncate">
+                  <h4
+                    class="text-xs font-black text-zinc-800 dark:text-zinc-100 line-clamp-2 leading-tight"
+                  >
                     {{ item.product.name }}
                   </h4>
                   <p class="text-xs font-medium text-primary">
@@ -169,7 +171,11 @@ export default defineComponent({
               class="flex-1 font-bold"
               @click="confirmClearCart"
             />
-            <PButton label="Finalizar" class="flex-[2] font-black p-button-lg" />
+            <PButton
+              label="Finalizar"
+              class="flex-[2] font-black p-button-lg"
+              @click="$emit('checkout')"
+            />
           </div>
         </div>
       </template>
