@@ -1,3 +1,7 @@
+# Evidências
+<img width="1918" height="1068" alt="image" src="https://github.com/user-attachments/assets/52a97806-9394-46fc-92b1-1ac5b0b3254f" />
+
+
 # VueShop — Atividade 2 | Vue.js & Options API
 
 Projeto desenvolvido como parte da Atividade 2 da disciplina Full Stack, cujo objetivo foi construir a interface de um e-commerce utilizando Vue.js com Options API, integrando as Models criadas na Atividade 1.
