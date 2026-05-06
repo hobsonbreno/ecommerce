@@ -30,7 +30,6 @@ router.patch('/:id', (req: Request, res: Response) => {
 });
 
 router.delete('/:id', (_req: Request, res: Response) => {
-
   res.status(204).send();
 });
 

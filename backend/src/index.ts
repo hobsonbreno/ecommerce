@@ -1,6 +1,7 @@
 import express from 'express';
 import { logger } from './middlewares/logger.js';
-import productRoutes from './routes/productRoutes.js';
+import productRouter from './routes/product.router.js';
+import categoryRouter from './routes/category.router.js';
 import orderRoutes from './routes/orderRoutes.js';
 
 const app = express();
@@ -9,7 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(logger);
 
-app.use('/products', productRoutes);
+app.use('/products', productRouter);
+app.use('/category', categoryRouter);
 app.use('/orders', orderRoutes);
 
 app.get('/', (req, res) => {
