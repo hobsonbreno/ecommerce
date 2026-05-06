@@ -4,12 +4,15 @@ import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 import Divider from 'primevue/divider'
 
+import { useToast } from 'primevue/usetoast'
+
 const cartStore = useCartStore()
 const router = useRouter()
+const toast = useToast()
 
 const finishOrder = () => {
   cartStore.clear()
-  alert('Pedido Finalizado com Sucesso!')
+  toast.add({ severity: 'success', summary: 'Sucesso', detail: 'Pedido Finalizado com Sucesso!', life: 3000 })
   router.push('/')
 }
 </script>

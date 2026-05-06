@@ -23,17 +23,9 @@ const toggleDarkMode = () => {
   document.documentElement.classList.toggle('dark', isDarkMode.value)
 }
 
-const loginUser = () => {
-  authStore.loginAsUser()
-}
-
-const loginAdmin = () => {
-  authStore.loginAsAdmin()
-}
-
 const logout = () => {
   authStore.logout()
-  router.push('/')
+  router.push('/login')
 }
 
 const menuItems = computed(() => [
@@ -117,7 +109,7 @@ onMounted(() => {
                 </p>
               </div>
               <Avatar
-                :label="authStore.user?.name.charAt(0)"
+                :label="authStore.user?.name ? authStore.user.name.charAt(0) : 'U'"
                 class="!bg-emerald-500 !text-white !font-bold"
                 shape="circle"
               />
@@ -125,8 +117,7 @@ onMounted(() => {
             </div>
 
             <div v-else class="flex gap-2">
-              <Button label="Login Admin" text size="small" @click="loginAdmin" />
-              <Button label="Entrar" severity="primary" size="small" @click="loginUser" />
+              <Button label="Entrar" severity="primary" size="small" @click="router.push('/login')" />
             </div>
           </div>
         </template>
