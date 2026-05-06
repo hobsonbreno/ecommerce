@@ -53,7 +53,7 @@ const menuItems = ref([
         icon: 'pi pi-sign-out',
         command: () => {
           authStore.logout()
-          router.push('/')
+          router.push('/login')
         },
       },
     ],
@@ -92,7 +92,7 @@ const breadcrumbItems = computed(() => {
 
       <div class="p-6 border-t border-zinc-200 dark:border-white/5 flex items-center gap-3">
         <Avatar
-          :label="authStore.user?.name.charAt(0)"
+          :label="authStore.user?.name ? authStore.user.name.charAt(0) : 'A'"
           class="!bg-purple-600 !text-white"
           shape="circle"
         />

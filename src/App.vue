@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import Toast from 'primevue/toast'
 
 onMounted(() => {
   document.documentElement.classList.add('dark')
@@ -8,6 +9,7 @@ onMounted(() => {
 
 <template>
   <div id="app-root" class="selection:bg-emerald-500 selection:text-white">
+    <Toast />
     <router-view />
   </div>
 </template>
